@@ -1,0 +1,90 @@
+ <!DOCTYPE html>
+<html>
+<style>
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-touch.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+<script src="http://ui-grid.info/release/ui-grid-unstable.js"></script>
+<link rel="stylesheet" href="http://ui-grid.info/release/ui-grid-unstable.css" type="text/css">    
+<body>
+
+ <div ng-app="myApp" ng-controller="myCtrl">
+      <div id="grid1" ui-grid="gridOptions" class="grid" ui-grid-move-columns></div>
+    </div>
+
+<script>
+var app = angular.module('myApp', ['ngTouch', 'ui.grid','ui.grid.moveColumns']);
+app.controller('myCtrl', function($scope,$interval) {
+   $scope.myData = [
+    {
+        symbol: "ESZ7",
+        lastPrice: "100",
+        lastSize: "1"
+    },
+    {
+        symbol: "NGZ7",
+        lastPrice: "200",
+        lastSize: "20"
+    },
+    {
+        symbol: "SPZ8",
+        lastPrice: "97",
+        lastSize: "20"
+    }
+];
+ //column defs
+    
+$scope.columnDefs = 
+[{
+      
+	field: 'symbol' , 
+	displayName: 'Symbol'    
+}, 
+{
+      displayName: 'Last Price'
+,
+	field: 'lastPrice'    
+},
+{
+	displayName: 'Last Size'
+,    
+	field: 'lastSize'    
+	
+}];
+    
+    //the grid options
+    
+
+$scope.gridOptions = 
+{
+      
+	data: $scope.myData,
+     
+	enableGridMenu: true, 
+	onRegisterApi: function (gridApi) {
+
+        $scope.gridApi = gridApi;
+      
+	},
+      
+	columnDefs: $scope.columnDefs
+    
+};
+    
+    function buildData(){
+    	for(i=0;i<$scope.myData.length;i++){
+    		$scope.myData[i].lastPrice = parseInt($scope.myData[i].lastPrice) + 5; // random updates
+    		$scope.myData[i].lastSize = parseInt($scope.myData[i].lastSize) + 10;
+    		
+    	}
+    	$scope.gridOptions.data = $scope.myData;
+    }
+    
+    $interval(buildData, 5000); // dynamic updates for every 5 seconds
+});
+</script>
+
+</body>
+</html>

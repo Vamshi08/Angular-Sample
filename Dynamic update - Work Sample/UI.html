@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Work Demonstration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 1000px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    .main-background{
+    	background-color: #f5f5f5;
+    }
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+    
+    .seed_heading_decor{    	
+    	text-decoration: underline;    
+    }
+    
+      
+    .seed_heading_decor2{    	
+    	text-decoration: none;   
+    	font-size: 12px; 
+    }
+
+ tr {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-collapse: collapse;
+}​
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.tr-override{
+    border-bottom: 0px;
+    border-top: 0px;
+border-collapse: collapse;
+}
+
+.tr-override1 {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-collapse: collapse;
+    background-color:gray;
+}
+
+
+.a_text_prop {
+    color: #52ad54;
+    
+}
+
+/* hr { 
+   margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: -1px solid #58af5a;
+} */
+  </style>
+</head>
+<body>
+
+
+<div class="container-fluid text-center main-background">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    <b>Side</b> | PORTAL <br/><br/>
+    	<a href="#">Dashboard</a><br/>	
+      <a href="#" >Participant</a><br/>
+     <a href="#" class="a_text_prop">Counterparties</a><br/>
+      <a href="#">Roles</a><br/>
+      <a href="#">Activity</a><br/>
+      <p></p>
+      <a href="#">Help</a><br/>
+      <a href="#">Help Center</a><br/>
+    </div>
+    <div class="col-sm-8" > 
+      <div>
+      	 <h4 class="seed_heading_decor text-center">Task Office Depot </h4>
+      	 <!-- <p class="seed_heading_decor2 text-right"> Sherlock Homes</p> -->
+      	 <div class="dropdown" align="right">
+      	 <p class="seed_heading_decor2 text-right" data-toggle="dropdown"> Sherlock Homes
+		    <!-- <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sherlock Homes -->
+		    <span class="caret"></span></button>
+		    <ul class="dropdown-menu">
+		      <li><a href="#">View Profile</a></li>
+		      <li><a href="#">Logout</a></li>		      
+		    </ul>
+		    
+  		</div>
+  		</div>
+      	      
+      <br> 
+      <div style="text-align:left"><b>Manage Participants</b></b> &nbsp;&nbsp;See all the Participants.
+      </div>
+      <hr style="margin-top:4px" class="hr_override"> 
+      <i class="fa fa-search"></i>
+      <input class="form-control" type="text" placeholder="Search..."><br>
+      <div class="col-sm-12">
+      <span class="col-sm-6">
+      <table style="width:100%">
+					<tr>
+					<th></th>
+						<th>Name</th>
+						<th>Status</th>
+						<th>Actions</th>
+					</tr>
+					<tr class="tr-override1">
+					<td>*</td>
+					<td>Jim Moriarity</td>
+					<td>N/A</td>
+					<td>></td>
+					</tr>
+					<tr>
+					<td>*</td>
+					<td>John Watson</td>
+					<td>N/A</td>
+					<td>></td>
+					</tr>
+					<tr>
+					<td>*</td>
+					<td>Irene Adler</td>
+					<td>N/A</td>
+					<td>></td>
+					</tr>
+				</table>
+      </span>
+      <span class="col-sm-6">
+      <strong>Jim Moriarty</strong>
+      
+      <table style="width:100%;border: 1px solid grey;background-color:white;">
+							<tr class="tr-override">
+								<td><b>Status</b></td>
+								<td>Active</td>
+							</tr>
+							<tr class="tr-override">
+								<td><b>Location</b></td>
+								<td>Florida, United States</td>
+							</tr>
+							<tr class="tr-override">
+								<td><b>Website</b></td>
+								<td>http://www.officedepot.com</td>
+							</tr>
+							<tr class="tr-override">
+								<td><b> Contact Number</b></td>
+								<td>123-123-1111</td>
+							</tr>
+							<tr class="tr-override">
+								<td><b>Contact Email</b></td>
+								<td>Moriarity@gmail.com</td>
+							</tr>
+							<tr class="tr-override">
+								<td><b>Account Admins</b></td>
+								<td>Jim Moriarty</td>
+							</tr>
+							<tr class="tr-override">
+								<td><b>Contracts Traded</b></td>
+								<td>None</td>
+							</tr>
+						</table>
+					</span>
+      </div> 
+				
+			</div>
+    </div>
+</div>
+
+
+</body>
+</html>
